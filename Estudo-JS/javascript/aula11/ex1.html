@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
+    <h1>De qual país você é?</h1>
+    Insira seu país: <input type="text" name="txtpais" id="txtpais"> 
+    <input type="button" value="Verificar" onclick="pais()">
+    <div id="res"></div> 
+    
+    <script>
+        function pais() {
+            let res = document.querySelector('div#res');
+            let txtpais = document.querySelector('input#txtpais');
+            let pais = (txtpais.value); // Quando for input, precisa passar o valor para a variavel 
+
+            res.innerHTML = `<p> Você mora no ${pais}, então é:`
+
+            if(pais == 'Brasil') // Se for string add ''
+            {
+                res.innerHTML += `<strong>Brasileiro</strong>`
+            }
+            else{
+                res.innerHTML += `<strong>Estrangeiro</strong>`
+            }
+        }
+    </script>
+
+</body>
+</html>
