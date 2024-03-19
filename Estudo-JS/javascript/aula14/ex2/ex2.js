@@ -13,7 +13,7 @@ function tabuada() {
         
         while (i <= 10 ){
             let item = document.createElement('option') //Cria opções para a tag SELECT do HTML
-            item.text = `${n} x ${i} = ${n*i}`
+            item.text = `${n} x ${i} = ${n*i}` // Cria o texto dentro da tag SELECT
             tab.appendChild(item) // Mostra os itens na tag SELECT do HTML --> Linha 3
             item.value = `tab${i}` // Mostra a tabuada selecionada
             i++
